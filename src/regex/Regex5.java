@@ -11,7 +11,10 @@ public class Regex5 {
 		String input="";
 		while(sc.hasNext())
 			input +=sc.next();
-		final String IPVALIDA="((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]|\\d)\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]|\\d)\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]|\\d)\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]|\\d))";
+		final String IPVALIDA="((25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]|\\d\\d)"
+				+ "\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]|\\d)"
+				+ "\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]|\\d)"
+				+ "\\.(25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]|\\d)";
 		Pattern patron= Pattern.compile(IPVALIDA);
 		Matcher matcher=patron.matcher(input);
 		int contador=0;
